@@ -221,7 +221,7 @@ typedef NS_ENUM(NSUInteger, ViewDisplayType) {
 {
     if (!_navigationBar) {
         __weak typeof(self) weakSelf = self;
-        _navigationBar = [[CJSearchNaviBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64) beginEditBlock:^(UISearchBar *searchBar) {
+        _navigationBar = [[CJSearchNaviBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, CJ_StatusBarAndNavigationBarHeight) beginEditBlock:^(UISearchBar *searchBar) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
             [strongSelf stopSearchAction];
         } clickSearchBlock:^(UISearchBar *searchBar) {
@@ -249,7 +249,7 @@ typedef NS_ENUM(NSUInteger, ViewDisplayType) {
 - (CJSearchTbView *)historyTBView
 {
     if (!_historyTBView) {
-        _historyTBView = [[CJSearchTbView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStyleGrouped];
+        _historyTBView = [[CJSearchTbView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CJ_StatusBarAndNavigationBarHeight) style:UITableViewStyleGrouped];
         _historyTBView.type = @"0";
         _historyTBView.backgroundColor = [UIColor whiteColor];
         _historyTBView.separatorColor = UIColorHex(0xf0f0f0);
@@ -273,7 +273,7 @@ typedef NS_ENUM(NSUInteger, ViewDisplayType) {
 //搜索结果列表
 - (CJSearchTbView *)resultTBView {
     if (!_resultTBView) {
-        _resultTBView = [[CJSearchTbView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
+        _resultTBView = [[CJSearchTbView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CJ_StatusBarAndNavigationBarHeight) style:UITableViewStylePlain];
         _resultTBView.backgroundColor = [UIColor whiteColor];
         _resultTBView.separatorColor = UIColorHex(0xf0f0f0);
         _resultTBView.type = @"1";

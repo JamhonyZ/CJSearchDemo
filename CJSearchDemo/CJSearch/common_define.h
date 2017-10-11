@@ -9,6 +9,19 @@
 #ifndef common_define_h
 #define common_define_h
 
+
+#define CJ_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//#define  CJ_StatusBarHeight      (CJ_iPhoneX ? 44.f : 20.f)
+
+//#define  CJ_NavigationBarHeight  44.f
+
+//#define  CJ_TabbarHeight         (CJ_iPhoneX ? (49.f+34.f) : 49.f)
+
+//#define  CJ_TabbarSafeBottomMargin         (CJ_iPhoneX ? 34.f : 0.f)
+
+#define  CJ_StatusBarAndNavigationBarHeight  (CJ_iPhoneX ? 88.f : 64.f)
+
 //
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
