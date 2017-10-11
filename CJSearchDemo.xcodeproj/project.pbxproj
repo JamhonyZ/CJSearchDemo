@@ -16,7 +16,6 @@
 		CD0A226C1F0B2851007758C2 /* CJSearchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0A226B1F0B2851007758C2 /* CJSearchDemoTests.m */; };
 		CD0A22771F0B2851007758C2 /* CJSearchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0A22761F0B2851007758C2 /* CJSearchDemoUITests.m */; };
 		CD0A228B1F0B2A13007758C2 /* CJSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0A228A1F0B2A13007758C2 /* CJSearchVC.m */; };
-		CD0A228F1F0B2D3B007758C2 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0A228E1F0B2D3B007758C2 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		CD0A22941F0B303B007758C2 /* searchBar_left_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0A22901F0B303B007758C2 /* searchBar_left_icon@2x.png */; };
 		CD0A22951F0B303B007758C2 /* searchBar_left_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0A22911F0B303B007758C2 /* searchBar_left_icon@3x.png */; };
 		CD0A22961F0B303B007758C2 /* searchBar_right_clear_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0A22921F0B303B007758C2 /* searchBar_right_clear_icon@2x.png */; };
@@ -68,8 +67,6 @@
 		CD0A22781F0B2851007758C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0A22891F0B2A13007758C2 /* CJSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchVC.h; sourceTree = "<group>"; };
 		CD0A228A1F0B2A13007758C2 /* CJSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSearchVC.m; sourceTree = "<group>"; };
-		CD0A228D1F0B2D3B007758C2 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
-		CD0A228E1F0B2D3B007758C2 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		CD0A22901F0B303B007758C2 /* searchBar_left_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchBar_left_icon@2x.png"; sourceTree = "<group>"; };
 		CD0A22911F0B303B007758C2 /* searchBar_left_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchBar_left_icon@3x.png"; sourceTree = "<group>"; };
 		CD0A22921F0B303B007758C2 /* searchBar_right_clear_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchBar_right_clear_icon@2x.png"; sourceTree = "<group>"; };
@@ -81,6 +78,8 @@
 		CD32D8C21F6F54710077938D /* CJSearchHotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchHotView.h; sourceTree = "<group>"; };
 		CD32D8C31F6F54710077938D /* CJSearchHotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSearchHotView.m; sourceTree = "<group>"; };
 		CD32D8C51F6F60740077938D /* common_define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common_define.h; sourceTree = "<group>"; };
+		CD421F041F8DEC8A00A443B2 /* ScreenShot0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot0.png; sourceTree = "<group>"; };
+		CD421F051F8DEC8A00A443B2 /* ScreenShot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1.png; sourceTree = "<group>"; };
 		CD992B321F736A05000213F0 /* delete_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete_icon@2x.png"; sourceTree = "<group>"; };
 		CD992B331F736A05000213F0 /* delete_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete_icon@3x.png"; sourceTree = "<group>"; };
 		CDEB5BD61F7263CA006D01B0 /* CJSearchTbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchTbView.h; sourceTree = "<group>"; };
@@ -142,6 +141,8 @@
 				CD0A22551F0B2851007758C2 /* AppDelegate.m */,
 				CD0A22571F0B2851007758C2 /* ViewController.h */,
 				CD0A22581F0B2851007758C2 /* ViewController.m */,
+				CD421F041F8DEC8A00A443B2 /* ScreenShot0.png */,
+				CD421F051F8DEC8A00A443B2 /* ScreenShot1.png */,
 				CD0A225A1F0B2851007758C2 /* Main.storyboard */,
 				CD0A225D1F0B2851007758C2 /* Assets.xcassets */,
 				CD0A225F1F0B2851007758C2 /* LaunchScreen.storyboard */,
@@ -231,18 +232,8 @@
 				CD0A22931F0B303B007758C2 /* searchBar_right_clear_icon@3x.png */,
 				CD0A229C1F0B5E51007758C2 /* xj_alert_succeed@2x.png */,
 				CD0A229D1F0B5E51007758C2 /* xj_alert_succeed@3x.png */,
-				CD0A228C1F0B2D3B007758C2 /* FDFullscreenPopGesture */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		CD0A228C1F0B2D3B007758C2 /* FDFullscreenPopGesture */ = {
-			isa = PBXGroup;
-			children = (
-				CD0A228D1F0B2D3B007758C2 /* UINavigationController+FDFullscreenPopGesture.h */,
-				CD0A228E1F0B2D3B007758C2 /* UINavigationController+FDFullscreenPopGesture.m */,
-			);
-			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,7 +382,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0A228F1F0B2D3B007758C2 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				CD32D8C41F6F54710077938D /* CJSearchHotView.m in Sources */,
 				CDEB5BDB1F726856006D01B0 /* CJSearchNaviBar.m in Sources */,
 				CDEB5BD81F7263CA006D01B0 /* CJSearchTbView.m in Sources */,

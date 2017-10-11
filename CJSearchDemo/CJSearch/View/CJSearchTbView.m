@@ -96,6 +96,10 @@
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     if ([self.type isEqualToString:@"0"]) {
+        
+        NSArray *originData = [[NSUserDefaults standardUserDefaults] objectForKey:kHistroySearchData];
+        if (originData.count == 0) return nil;
+        
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kTagTitleHeight+10)];
         view.backgroundColor = [UIColor whiteColor];
         
@@ -121,7 +125,8 @@
     return [UIView new];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return [self.type isEqualToString:@"0"] ? 30.f : 0.01;
+    NSArray *originData = [[NSUserDefaults standardUserDefaults] objectForKey:kHistroySearchData];
+    return [self.type isEqualToString:@"0"] ? (originData.count == 0 ? 0.01 : 30.f) : 0.01;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

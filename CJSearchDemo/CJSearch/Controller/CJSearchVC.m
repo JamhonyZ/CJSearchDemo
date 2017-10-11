@@ -7,22 +7,17 @@
 //
 
 #import "CJSearchVC.h"
-#import "UINavigationController+FDFullscreenPopGesture.h"
 #import "common_define.h"
 #import "CJSearchHotView.h"
 #import "CJSearchTbView.h"
 #import "CJSearchNaviBar.h"
+#import "common_define.h"
+
 typedef NS_ENUM(NSUInteger, ViewDisplayType) {
     ViewDisplayHistoryTableViewType,     //显示历史搜索
     ViewDisplayResultViewType,           //显示结果
     ViewDisplayDataBlankType             //数据为空
 };
-
-static NSString *const deleteTip = @"您要清除搜索记录么？";
-
-static NSString *const kHistroySearchData = @"HistroySearchData";
-
-static NSInteger const kMaxHistroyNum = 10;
 
 @interface CJSearchVC ()
 
@@ -47,14 +42,14 @@ static NSInteger const kMaxHistroyNum = 10;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    self.fd_interactivePopDisabled = YES;
+
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-//    self.fd_interactivePopDisabled = NO;
+
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
@@ -65,9 +60,7 @@ static NSInteger const kMaxHistroyNum = 10;
 }
 
 - (void)creatView {
-    
-//    self.fd_prefersNavigationBarHidden = YES;
-    
+
     [self.view addSubview:self.navigationBar];
     [self.view addSubview:self.historyTBView];
     [self.view addSubview:self.resultTBView];
@@ -252,7 +245,7 @@ static NSInteger const kMaxHistroyNum = 10;
     }
     return _navigationBar;
 }
-
+//历史搜索列表
 - (CJSearchTbView *)historyTBView
 {
     if (!_historyTBView) {
@@ -277,6 +270,7 @@ static NSInteger const kMaxHistroyNum = 10;
     
     return _historyTBView;
 }
+//搜索结果列表
 - (CJSearchTbView *)resultTBView {
     if (!_resultTBView) {
         _resultTBView = [[CJSearchTbView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
@@ -288,7 +282,7 @@ static NSInteger const kMaxHistroyNum = 10;
     }
     return _resultTBView;
 }
-
+//历史搜索数据源
 - (NSMutableArray *)historyData
 {
     if (!_historyData) {
@@ -296,6 +290,7 @@ static NSInteger const kMaxHistroyNum = 10;
     }
     return _historyData;
 }
+//搜索结果数据源
 - (NSMutableArray *)resultData {
     if (!_resultData) {
         _resultData = @[].mutableCopy;
@@ -303,6 +298,7 @@ static NSInteger const kMaxHistroyNum = 10;
     return _resultData;
 }
 
+//热门视图搜索
 - (CJSearchHotView *)hotHeadView {
     if (!_hotHeadView) {
         __weak typeof(self) weakSelf = self;
@@ -311,7 +307,7 @@ static NSInteger const kMaxHistroyNum = 10;
             __strong typeof(weakSelf) strongSelf = weakSelf;
             [strongSelf saveHistoryKeyWord:key];
         }];
-        _hotHeadView.hotKeyArr = @[@"我是",@"创建",@"科技",@"互联网部门",@"同事",@"iOS组员",@"cjzzh",@"科技",@"互联网部门",@"同事"];
+        _hotHeadView.hotKeyArr = @[@"我是",@"创建",@"科技",@"研发",@"iOS组员",@"玉树临风",@"高大威猛",@"才华横溢",@"这TM都信"];
     }
     return _hotHeadView;
 }

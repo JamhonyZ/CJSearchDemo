@@ -42,5 +42,14 @@
 //标题高度
 static CGFloat const kTagTitleHeight = 20.f;
 
+//清除tip文本
+static NSString *const deleteTip = @"您要清除搜索记录么？";
+
+//key
+static NSString *const kHistroySearchData = @"HistroySearchData";
+
+//最大历史搜索条数
+static NSInteger const kMaxHistroyNum = 10;
+
 
 #endif /* common_define_h */
